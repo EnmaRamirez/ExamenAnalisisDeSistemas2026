@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ClienteApp.Api/ClienteApp.Api.csproj" Id="3f7fd1be-7053-4a88-8915-c1456945aafa" />
+  <Project Path="ClienteApp.Tests/ClienteApp.Tests.csproj" />
+  <Project Path="ClienteApp/ClienteApp.Core.csproj" />
+</Solution>
