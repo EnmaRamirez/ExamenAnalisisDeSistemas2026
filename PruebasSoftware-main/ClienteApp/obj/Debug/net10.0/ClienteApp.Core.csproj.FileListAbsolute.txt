@@ -1,0 +1,13 @@
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\bin\Debug\net10.0\ClienteApp.Core.deps.json
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\bin\Debug\net10.0\ClienteApp.Core.dll
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\bin\Debug\net10.0\ClienteApp.Core.pdb
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.csproj.AssemblyReference.cache
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.AssemblyInfoInputs.cache
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.AssemblyInfo.cs
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.csproj.CoreCompileInputs.cache
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.sourcelink.json
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.dll
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\refint\ClienteApp.Core.dll
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ClienteApp.Core.pdb
+C:\ExamenaAnalisis2026\PruebasSoftware-main\ClienteApp\obj\Debug\net10.0\ref\ClienteApp.Core.dll

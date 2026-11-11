@@ -63,6 +63,45 @@ public class ClientesApiTests
             HttpStatusCode.BadRequest,
             response.StatusCode);
     }
+        [Fact]
+    public async Task ConsultarClienteExistente_DebeDevolver200OK()
+    {
+        // Arrange
+        using var factory = new ClienteApiFactory();
+        using var client = factory.CreateClient();
+
+        var solicitud = new
+        {
+            Nombre = "Cliente API",
+            Correo = $"api_{Guid.NewGuid():N}@example.com"
+        };
+
+        // Registramos primero un cliente para garantizar que exista en la BD en memoria
+        var registroResponse = await client.PostAsJsonAsync("/api/Clientes", solicitud);
+        var clienteRegistrado = await registroResponse.Content.ReadFromJsonAsync<ClienteRespuesta>();
+
+        // Act: Consultamos el cliente existente usando el ID que nos devolvió el servidor
+        var response = await client.GetAsync($"/api/Clientes/{clienteRegistrado.Id}");
+
+        // Assert
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task ConsultarClienteInexistente_DebeDevolver404NotFound()
+    {
+        // Arrange
+        using var factory = new ClienteApiFactory();
+        using var client = factory.CreateClient();
+        int idInexistente = 99999;
+
+        // Act: Consultar un cliente que no existe
+        var response = await client.GetAsync($"/api/Clientes/{idInexistente}");
+
+        // Assert
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
 
     private sealed record ClienteRespuesta(
         int Id,

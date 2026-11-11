@@ -70,6 +70,19 @@ public class ClienteRepositoryTests : IDisposable
             "El correo ya está registrado.",
             excepcion.Message);
     }
+        [Fact]
+    public void ObtenerPorId_IdentificadorInexistente_DebeDevolverNulo()
+    {
+        // Arrange: Utilizar el servicio y el repositorio real inicializado en el constructor
+        var service = new ClienteService(_repository);
+        int idInexistente = 9999;
+
+        // Act: Consultar un identificador que no existe de forma síncrona
+        var resultado = service.ObtenerPorId(idInexistente);
+
+        // Assert: Comprobar que se obtiene un resultado nulo
+        Assert.Null(resultado);
+    }
 
 
     public void Dispose()

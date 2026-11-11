@@ -129,6 +129,27 @@ public class ClienteServiceTests
             r => r.Agregar(It.IsAny<Cliente>()),
             Times.Never);
     }
+        [Fact]
+    public void ObtenerPorId_DebeDevolverClienteYConsultarRepositorioUnaVez()
+    {
+        // Arrange
+        var clienteEsperado = _service.Registrar("Ana López", "ana@example.com");
+        
+        _repositoryMock.Setup(r => r.ObtenerPorId(clienteEsperado.Id))
+                       .Returns(clienteEsperado);
+
+        // Act
+        var resultado = _service.ObtenerPorId(clienteEsperado.Id);
+
+        // Assert
+        Assert.NotNull(resultado);
+        Assert.Equal(clienteEsperado.Id, resultado.Id);
+        Assert.Equal(clienteEsperado.Nombre, resultado.Nombre);
+        
+        // Comprueba que consulta al repositorio exactamente una vez
+        _repositoryMock.Verify(r => r.ObtenerPorId(clienteEsperado.Id), Times.Once);
+    }
+
 
 
 }
